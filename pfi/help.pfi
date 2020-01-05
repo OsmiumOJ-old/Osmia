@@ -1,0 +1,13 @@
+Osmia 是一个有用的小工具集合, 或许能帮助你更方便地使用电脑.
+目前只有 Windows 版本可以使用, 其他正在开发中.
+===========================================
+命令列表 (对于大小写敏感):
+    osmia [--help || -h || /h || -? || /?]: 查看帮助.
+    osmia [--version || -v || /v]: 查看或检查版本.
+    osmia [--download || -d || /d <Osmia 工具名>]: 下载一个 Osmia 工具, 但不安装它.
+    osmia [--init || -I || /I <Osmia 工具名>]: 初始化 (即安装) 一个 Osmia 工具.
+    osmia [--install || -i || /i <Osmia 工具名>]: 下载并安装一个 Osmia 工具.
+    osmia [--uninstall || -u || /u <Osmia 工具名>]: 卸载一个 Osmia 工具.
+
+另外, 我们还预安装了:
+    builtin.opencmdhere
