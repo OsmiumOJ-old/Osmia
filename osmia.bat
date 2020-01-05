@@ -14,12 +14,12 @@ if "%1" == "" (
 ) else ( goto err )
 :hlp
 if "%2" == "" (
-    type pfi\help.pfi
+    type .\pfi\help.pfi
     goto end
 ) else ( goto err )
 :vers
 if "%2" == "" (
-    type pfi\version.pfi
+    type .\pfi\version.pfi
     goto end
 ) else ( goto err )
 :err
