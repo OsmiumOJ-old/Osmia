@@ -9,39 +9,79 @@
             body {
                 margin: 0;
                 padding: 0;
-                background: #ffddff
+                overflow: hidden;
+                background: #ffe5ff
                 /* Sao pink */
             }
             div.zuoshang {
                 position: absolute;
-                background: linear-gradient(to right, #ff00ff, #ee82ee);
-                box-shadow: 3px 0 4px 0 rgba(0, 0, 0, 0.24), 3px 0 9px 0 rgba(0, 0, 0, 0.19);
+                top: 0;
+                left: 0;
+                background: linear-gradient(to bottom, #ff00ff, #ee82ee);
+                box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.24), 3px 3px 9px 0 rgba(0, 0, 0, 0.19);
+                vertical-align: bottom;
                 transition-duration: 0.4s;
                 transform: translate(-50%, -50%) rotate(45deg)
             }
             div.zuoshang:hover {
-                box-shadow: 12px 0 16px 0 rgba(95, 37, 37, 0.24), 17px 0 24px 0 rgba(0, 0, 0, 0.19)
+                box-shadow: 12px 12px 16px 0 rgba(95, 37, 37, 0.24), 17px 17px 24px 0 rgba(0, 0, 0, 0.19)
+            }
+            div.zuoshang span {
+                font-weight: 600;
+                font-size: 18px;
+            }
+            div.zuoxia {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(to top, #ba55d3, #9400d3);
+                box-shadow: 3px -3px 4px 0 rgba(0, 0, 0, 0.24), 3px -3px 9px 0 rgba(0, 0, 0, 0.19);
+                transition-duration: 0.4s;
+                transform: translate(-50%, 50%) rotate(45deg)
+            }
+            div.zuoxia:hover {
+                box-shadow: 12px -12px 16px 0 rgba(95, 37, 37, 0.24), 17px -17px 24px 0 rgba(0, 0, 0, 0.19)
+            }
+            div.youshang {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: linear-gradient(to bottom, #c71585, #ff1493);
+                box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, 0.24), -3px 3px 9px 0 rgba(0, 0, 0, 0.19);
+                transition-duration: 0.4s;
+                transform: translate(50%, -50%) rotate(45deg)
+            }
+            div.youshang:hover {
+                box-shadow: -12px 12px 16px 0 rgba(95, 37, 37, 0.24), -17px 17px 24px 0 rgba(0, 0, 0, 0.19)
+            }
+            div.youxia {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: linear-gradient(to top, #8a2be2, #9370db);
+                box-shadow: -3px -3px 4px 0 rgba(0, 0, 0, 0.24), -3px -3px 9px 0 rgba(0, 0, 0, 0.19);
+                transition-duration: 0.4s;
+                transform: translate(50%, 50%) rotate(45deg)
+            }
+            div.youxia:hover {
+                box-shadow: -12px -12px 16px 0 rgba(95, 37, 37, 0.24), -17px -17px 24px 0 rgba(0, 0, 0, 0.19)
             }
         </style>
         <script src="jq.js"></script>
         <script>
             $(function() {
-                var hf=Math.min($(window).width(), $(window).height())/1.4;
-                $("div.zuoshang").css({width: hf, height: hf, zIndex: 3});
-                /*
-                $("div.zuoxia").css({width: hf, height: hf, zIndex: 4});
-                $("div.youshang").css({width: hf, height: hf, zIndex: 5});
-                $("div.youxia").css({width: hf, height: hf, zIndex: 6});
-                */
+                var hf=Math.min($(window).width(), $(window).height())/1.35;
+                $("div.zuoshang").css({width: hf, height: hf, lineHeight: hf, zIndex: 3});
+                $("div.zuoxia").css({width: hf, height: hf, lineHeight: hf, zIndex: 4});
+                $("div.youshang").css({width: hf, height: hf, lineHeight: hf, zIndex: 6});
+                $("div.youxia").css({width: hf, height: hf, lineHeight: hf, zIndex: 5});
             });
         </script>
     </head>
     <body>
-        <div class="zuoshang"></div>
-        <!--
+        <div class="zuoshang"><span>下载</span></div>
         <div class="zuoxia"></div>
         <div class="youshang"></div>
         <div class="youxia"></div>
-        -->
     </body>
 </html>
