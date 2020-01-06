@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Osmia - 一个有用的小工具集合</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.svg"/>
+        <link rel="icon" sizes="any" mask type="image/x-icon" href="favicon.svg"/>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: #ffddff
+                /* Sao pink */
+            }
+            div.zuoshang {
+                position: absolute;
+                background: linear-gradient(to right, #ff00ff, #ee82ee);
+                box-shadow: 3px 0 4px 0 rgba(0, 0, 0, 0.24), 3px 0 9px 0 rgba(0, 0, 0, 0.19);
+                transition-duration: 0.4s;
+                transform: translate(-50%, -50%) rotate(45deg)
+            }
+            div.zuoshang:hover {
+                box-shadow: 12px 0 16px 0 rgba(95, 37, 37, 0.24), 17px 0 24px 0 rgba(0, 0, 0, 0.19)
+            }
+        </style>
+        <script src="jq.js"></script>
+        <script>
+            $(function() {
+                var hf=Math.min($(window).width(), $(window).height())/1.4;
+                $("div.zuoshang").css({width: hf, height: hf, zIndex: 3});
+                /*
+                $("div.zuoxia").css({width: hf, height: hf, zIndex: 4});
+                $("div.youshang").css({width: hf, height: hf, zIndex: 5});
+                $("div.youxia").css({width: hf, height: hf, zIndex: 6});
+                */
+            });
+        </script>
+    </head>
+    <body>
+        <div class="zuoshang"></div>
+        <!--
+        <div class="zuoxia"></div>
+        <div class="youshang"></div>
+        <div class="youxia"></div>
+        -->
+    </body>
+</html>
